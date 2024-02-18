@@ -3,13 +3,16 @@ import modals from "./modules/moduls";
 import tabs from "./modules/tabs";
 import forms from "./modules/forms";
 import changeModalState from "./modules/changeModalState";
+import timer from "./modules/timer";
+import images from "./modules/images";
 
 window.addEventListener("DOMContentLoaded", () => {
   "use strick";
 
   let modalState = {};
+  let deadline = "2024-03-27";
 
-  changeModalState(modalState)
+  changeModalState(modalState);
   modals();
   tabs(".glazing_slider", ".glazing_block", ".glazing_content", "active");
   tabs(
@@ -26,4 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
     "inline-block"
   );
   forms(modalState);
+  timer(".container1", deadline);
+  images()
 });
